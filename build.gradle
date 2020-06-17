@@ -44,3 +44,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     
 }
+//grid build任务参数配置 
+task makeReleaseJar(type: Jar, dependsOn: []){ //type生成的文件类型  dependsOn在该任务执行之前优先执行的任务
+    archiveName = 'testSpringBoot.jar'  //文件名称
+    destinationDir = file('build/libs')	//文件生成的目录
+}
